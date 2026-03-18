@@ -1,4 +1,4 @@
-import { Command } from 'ckeditor5/src/core';
+import { Command } from '@ckeditor/ckeditor5-core';
 import { getSelectedMathModelWidget } from './utils';
 
 export default class MathCommand extends Command {

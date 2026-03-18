@@ -1,15 +1,15 @@
-import type { Editor } from 'ckeditor5/src/core';
+import type { Editor } from '@ckeditor/ckeditor5-core';
 import type {
-	Element as CKElement,
-	DocumentSelection
-} from 'ckeditor5/src/engine';
-import { BalloonPanelView } from 'ckeditor5/src/ui';
-import { CKEditorError, type PositioningFunction } from 'ckeditor5/src/utils';
+	ModelElement,
+	ModelDocumentSelection
+} from '@ckeditor/ckeditor5-engine';
+import { BalloonPanelView } from '@ckeditor/ckeditor5-ui';
+import { CKEditorError, type PositioningFunction, global } from '@ckeditor/ckeditor5-utils';
 import type { KatexOptions, MathJax2, MathJax3 } from './typings-external';
 
 export function getSelectedMathModelWidget(
-	selection: DocumentSelection
-): null | CKElement {
+	selection: ModelDocumentSelection
+): null | ModelElement {
 	const selectedElement = selection.getSelectedElement();
 
 	if (
@@ -89,7 +89,7 @@ export async function renderEquation(
 	previewClassName: Array<string> = [],
 	katexRenderOptions: KatexOptions = {}
 ): Promise<void> {
-	if ( engine == 'mathjax' ) {
+	if ( engine == 'mathjax' && global.window.MathJax !== undefined ) {
 		if ( isMathJaxVersion3( MathJax ) ) {
 			selectRenderMode(
 				element,
