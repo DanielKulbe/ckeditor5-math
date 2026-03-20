@@ -1,13 +1,13 @@
 import MathCommand from './mathcommand';
-import { type Editor, Plugin } from '@ckeditor/ckeditor5-core';
+import { type Editor, Plugin } from 'ckeditor5/src/core';
 import {
 	toWidget,
 	Widget,
 	viewToModelPositionOutsideModelElement
-} from '@ckeditor/ckeditor5-widget';
+} from 'ckeditor5/src/widget';
 import { renderEquation, extractDelimiters } from './utils';
-import type { ViewDowncastWriter, ModelElement } from '@ckeditor/ckeditor5-engine';
-import { CKEditorError, uid } from '@ckeditor/ckeditor5-utils';
+import type { ViewDowncastWriter, ModelElement } from 'ckeditor5/src/engine';
+import { CKEditorError, uid } from 'ckeditor5/src/utils';
 
 export default class MathEditing extends Plugin {
 	public static get requires() {

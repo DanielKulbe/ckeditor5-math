@@ -1,5 +1,5 @@
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Plugin } from 'ckeditor5/src/core';
+import { Widget } from 'ckeditor5/src/widget';
 
 import MathUI from './mathui';
 import MathEditing from './mathediting';

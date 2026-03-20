@@ -1,4 +1,4 @@
-import { IconCheck, IconCancel } from '@ckeditor/ckeditor5-icons';
+import { IconCheck, IconCancel } from 'ckeditor5/src/icons';
 import {
 	ButtonView,
 	createLabeledInputText,
@@ -11,8 +11,8 @@ import {
 	ViewCollection,
 	type InputTextView,
 	type FocusableView
-} from '@ckeditor/ckeditor5-ui';
-import { Locale, FocusTracker, KeystrokeHandler } from '@ckeditor/ckeditor5-utils';
+} from 'ckeditor5/src/ui';
+import { Locale, FocusTracker, KeystrokeHandler } from 'ckeditor5/src/utils';
 import { extractDelimiters, hasDelimiters } from '../utils';
 import MathView from './mathview';
 import '../../theme/mathform.css';
